@@ -1,0 +1,157 @@
+---
+slug: /
+sidebar_position: 0
+title: "Documentação do Hermes Agent"
+description: "O agente de IA que melhora sozinho, criado pela Nous Research. Um ciclo de aprendizado embutido que cria skills a partir da experiência, aprimora essas skills durante o uso e lembra de tudo entre sessões."
+hide_table_of_contents: true
+displayed_sidebar: docs
+---
+
+import Link from "@docusaurus/Link";
+
+# Hermes Agent
+
+O agente de IA que melhora sozinho, criado pela [Nous Research](https://nousresearch.com). O único agente com um ciclo de aprendizado embutido — ele cria skills a partir da experiência, aprimora essas skills durante o uso, se lembra de guardar o que aprendeu e constrói, sessão após sessão, um modelo cada vez mais profundo de quem você é.
+
+<div
+  style={{
+    display: "flex",
+    gap: "1rem",
+    marginBottom: "2rem",
+    flexWrap: "wrap",
+  }}
+>
+  <Link
+    to="/getting-started/installation"
+    style={{
+      display: "inline-block",
+      padding: "0.6rem 1.2rem",
+      backgroundColor: "#FFD700",
+      color: "#07070d",
+      borderRadius: "8px",
+      fontWeight: 600,
+      textDecoration: "none",
+    }}
+  >
+    Comece agora →
+  </Link>
+  <Link
+    to="/user-guide/bot-mode"
+    style={{
+      display: "inline-block",
+      padding: "0.6rem 1.2rem",
+      border: "1px solid rgba(255,215,0,0.2)",
+      borderRadius: "8px",
+      textDecoration: "none",
+    }}
+  >
+    Conheça o Bot Mode
+  </Link>
+  <a
+    href="https://hermes-agent.nousresearch.com/"
+    style={{
+      display: "inline-block",
+      padding: "0.6rem 1.2rem",
+      border: "1px solid rgba(255,215,0,0.2)",
+      borderRadius: "8px",
+      textDecoration: "none",
+    }}
+  >
+    Baixe o Desktop
+  </a>
+  <a
+    href="https://github.com/NousResearch/hermes-agent"
+    style={{
+      display: "inline-block",
+      padding: "0.6rem 1.2rem",
+      border: "1px solid rgba(255,215,0,0.2)",
+      borderRadius: "8px",
+      textDecoration: "none",
+    }}
+  >
+    Veja no GitHub
+  </a>
+</div>
+
+## Instalação
+
+### Windows ou macOS
+
+Para instalar facilmente os aplicativos de linha de comando e desktop, [baixe o instalador do Hermes Desktop](https://hermes-agent.nousresearch.com/) no nosso site e execute-o.
+
+### Sem o Hermes Desktop:
+
+Para instalar somente a linha de comando, sem o Hermes Desktop, execute:
+
+Em dispositivos Android aarch64, use o [guia do APT do Termux](./getting-started/termux.md), que é separado.
+
+#### Linux / macOS / WSL2
+
+```bash
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+```
+
+#### Windows (nativo)
+
+Execute no PowerShell:
+
+```powershell
+iex (irm https://hermes-agent.nousresearch.com/install.ps1)
+```
+
+Consulte o **[guia de instalação](./getting-started/installation.md)** completo para saber o que o instalador faz, quem é dono da instalação, onde ficam os dados e as observações específicas do Windows. Para a matriz completa de suporte a plataformas, consulte **[Suporte a plataformas](./getting-started/platform-support.md)**.
+
+:::tip O caminho mais rápido até um agente funcionando
+Depois de instalar, execute `hermes setup --portal` — um único login OAuth cobre um modelo e também as quatro ferramentas do Tool Gateway (busca na web, geração de imagens, TTS, navegador). Consulte [Nous Portal](./integrations/nous-portal.md).
+:::
+
+## O que é o Hermes Agent?
+
+Não é um copiloto de programação preso a uma IDE nem um chatbot que apenas embrulha uma única API. É um **agente autônomo** que fica mais capaz quanto mais tempo roda. Ele vive onde você colocá-lo — uma VPS de US$ 5, um cluster de GPUs ou uma infraestrutura serverless (Daytona, Modal) que quase não custa nada quando está ociosa. Converse com ele pelo Telegram enquanto ele trabalha em uma VM na nuvem na qual você nunca precisa entrar por SSH. Ele não fica preso ao seu notebook.
+
+## Links rápidos
+
+|                                                                         |                                                                       |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| 🚀 **[Instalação](./getting-started/installation.md)**                    | Instale em 60 segundos no Linux, macOS, WSL2, Windows nativo, Nix e NixOS ou Android |
+| 📖 **[Tutorial de início rápido](./getting-started/quickstart.md)**               | Sua primeira conversa e os principais recursos para experimentar                       |
+| 🗺️ **[Trilha de aprendizado](./getting-started/learning-path.md)**                  | Encontre a documentação certa para o seu nível de experiência                         |
+| ⚙️ **[Configuração](./user-guide/configuration.md)**                       | Arquivo de configuração, provedores, modelos e opções                           |
+| 💬 **[Gateway de mensagens](./user-guide/messaging/index.md)**                       | Configure Telegram, Discord, Slack, WhatsApp, Teams e outros             |
+| 🤖 **[Bot Mode](./user-guide/bot-mode.md)**                                | Bots com nome, cada um com seu próprio modelo, memória, skills, rotinas e chats  |
+| 🔧 **[Ferramentas e toolsets](./user-guide/features/tools.md)**                   | Mais de 60 ferramentas embutidas e como configurá-las                          |
+| 🧠 **[Sistema de memória](./user-guide/features/memory.md)**                     | Memória persistente que cresce entre sessões                          |
+| 📚 **[Sistema de skills](./user-guide/features/skills.md)**                     | Memória procedural que o agente cria e reutiliza                        |
+| 🔌 **[Integração com MCP](./user-guide/features/mcp.md)**                      | Conecte-se a servidores MCP, filtre as ferramentas deles e estenda o Hermes com segurança  |
+| 🧭 **[Use MCP com o Hermes](./guides/use-mcp-with-hermes.md)**               | Padrões práticos de configuração de MCP, exemplos e tutoriais                 |
+| 🎙️ **[Modo de voz](./user-guide/features/voice-mode.md)**                    | Interação por voz em tempo real na CLI, no Telegram, no Discord e em canais de voz do Discord |
+| 🗣️ **[Use o modo de voz com o Hermes](./guides/use-voice-mode-with-hermes.md)** | Configuração prática e padrões de uso para fluxos de voz com o Hermes          |
+| 🎭 **[Personalidade e SOUL.md](./user-guide/features/personality.md)**        | Defina a voz padrão do Hermes com um SOUL.md global                    |
+| 📄 **[Arquivos de contexto](./user-guide/features/context-files.md)**              | Arquivos de contexto do projeto que moldam cada conversa                   |
+| 🔒 **[Segurança](./user-guide/security.md)**                                 | Aprovação de comandos, autorização, isolamento em contêineres                  |
+| 💡 **[Dicas e boas práticas](./guides/tips.md)**                            | Ganhos rápidos para aproveitar o Hermes ao máximo                              |
+| 🏗️ **[Arquitetura](./developer-guide/architecture.md)**                    | Como tudo funciona por dentro                                           |
+| ❓ **[Perguntas frequentes e solução de problemas](./reference/faq.md)**                          | Dúvidas comuns e soluções                                        |
+
+## Principais recursos
+
+- **Um ciclo de aprendizado fechado** — Memória curada pelo próprio agente com lembretes periódicos, criação autônoma de skills, aprimoramento das skills durante o uso, recuperação entre sessões com FTS5 e resumos por LLM, e modelagem dialética do usuário com o [Honcho](https://github.com/plastic-labs/honcho)
+- **Roda em qualquer lugar, não só no seu notebook** — 7 backends de terminal: local, Docker, SSH, Daytona, Singularity, Modal, Vercel Sandbox. Daytona e Modal oferecem persistência serverless — o seu ambiente hiberna quando está ocioso e quase não custa nada
+- **Vive onde você está** — CLI, Telegram, Discord, Slack, WhatsApp, Signal, Matrix, Mattermost, e-mail, SMS, DingTalk, Feishu, WeCom, Weixin, QQ Bot, Yuanbao, BlueBubbles, Home Assistant, Microsoft Teams, Google Chat e outros — mais de 20 plataformas a partir de um único gateway
+- **Feito por quem treina modelos** — Criado pela [Nous Research](https://nousresearch.com), o laboratório por trás do Hermes, do Nomos e do Psyche. Funciona com o [Nous Portal](https://portal.nousresearch.com), o [OpenRouter](https://openrouter.ai), a OpenAI ou qualquer endpoint
+- **Automações agendadas** — Cron embutido com entrega em qualquer plataforma
+- **[Bot Mode](./user-guide/bot-mode.md)** — Monte uma equipe duradoura de Bots especialistas que trabalham juntos em chats de grupo e por meio de `@mentions`
+- **Delega e paraleliza** — Crie subagentes isolados para frentes de trabalho em paralelo. A chamada programática de ferramentas via `execute_code` condensa pipelines de várias etapas em uma única chamada de inferência
+- **Skills em padrão aberto** — Compatível com o [agentskills.io](https://agentskills.io). As skills são portáteis, compartilháveis e contribuídas pela comunidade por meio do Skills Hub
+- **Controle total da web** — Busca, extração, navegação, visão, geração de imagens, TTS — uma única assinatura do [Nous Portal](./integrations/nous-portal.md) inclui tudo isso
+- **Suporte a MCP** — Conecte-se a qualquer servidor MCP para ampliar as ferramentas disponíveis
+- **Pronto para pesquisa** — Processamento em lote, exportação de trajetórias, treinamento por RL com o Atropos. Criado pela [Nous Research](https://nousresearch.com) — o laboratório por trás dos modelos Hermes, Nomos e Psyche
+
+## Para LLMs e agentes de programação
+
+Pontos de entrada desta documentação legíveis por máquina:
+
+- **[`/llms.txt`](/llms.txt)** — índice selecionado de todas as páginas da documentação, com descrições curtas. Cerca de 17 KB, seguro para carregar no contexto de um LLM.
+- **[`/llms-full.txt`](/llms-full.txt)** — todas as páginas da documentação concatenadas em um único arquivo markdown, para ingestão de uma só vez. Cerca de 1,8 MB.
+
+Os dois arquivos também estão disponíveis em `/docs/llms.txt` e `/docs/llms-full.txt`. São gerados de novo a cada deploy.
